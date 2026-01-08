@@ -27,6 +27,14 @@ const Navbar = () => {
     // Handle anchor links for home page
     const isHome = location.pathname === '/'
 
+    const handleScroll = (e, id) => {
+        e.preventDefault()
+        const element = document.getElementById(id)
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
     return (
         <nav className="navbar">
             <div className="container navbar-container">
@@ -39,9 +47,9 @@ const Navbar = () => {
 
                     {isHome ? (
                         <>
-                            <a href="#features" className="nav-link">Features</a>
-                            <a href="#pricing" className="nav-link">Pricing</a>
-                            <a href="#faq" className="nav-link">FAQ</a>
+                            <a href="#features" className="nav-link" onClick={(e) => handleScroll(e, 'features')}>Features</a>
+                            <a href="#pricing" className="nav-link" onClick={(e) => handleScroll(e, 'pricing')}>Pricing</a>
+                            <a href="#faq" className="nav-link" onClick={(e) => handleScroll(e, 'faq')}>FAQ</a>
                         </>
                     ) : (
                         <Link to="/" className="nav-link">Home</Link>
