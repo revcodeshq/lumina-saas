@@ -1,0 +1,117 @@
+/* Global Background for Glassmorphism Context */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08), transparent 25%);
+    pointer-events: none;
+}
+
+[data-theme='dark'] body::before {
+    background:
+        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(244, 114, 182, 0.15), transparent 30%);
+}
+
+/* Navbar Mobile Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    cursor: pointer;
+    z-index: 101;
+    padding: 0;
+    border: none;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-main);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bar.open:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.bar.open:nth-child(2) {
+    opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background-color: var(--bg-white);
+        /* Fallback */
+        background-color: color-mix(in srgb, var(--bg-white) 90%, transparent);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        gap: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        border-top: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        font-size: 1.25rem;
+    }
+
+    .btn-sm {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* Enhanced Glassmorphism for Cards */
+.feature-card,
+.pricing-card,
+.accordion-item,
+.login-card {
+    background-color: color-mix(in srgb, var(--bg-surface) 70%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='light'] .feature-card,
+[data-theme='light'] .pricing-card,
+[data-theme='light'] .accordion-item {
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .feature-card,
+[data-theme='dark'] .pricing-card,
+[data-theme='dark'] .accordion-item {
+    border-color: rgba(255, 255, 255, 0.1);
+}

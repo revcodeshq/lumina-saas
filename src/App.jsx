@@ -1,5 +1,6 @@
 import React from 'react'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import './mobile-glass.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Login from './pages/Login'

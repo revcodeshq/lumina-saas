@@ -27,11 +27,22 @@ const Navbar = () => {
     // Handle anchor links for home page
     const isHome = location.pathname === '/'
 
+    // Mobile menu state
+    const [isOpen, setIsOpen] = useState(false)
+
     const handleScroll = (e, id) => {
         e.preventDefault()
+        setIsOpen(false) // Close menu on click
         const element = document.getElementById(id)
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' })
+            const headerOffset = 80
+            const elementPosition = element.getBoundingClientRect().top
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            })
         }
     }
 
@@ -43,7 +54,13 @@ const Navbar = () => {
                     Lumina
                 </a>
 
-                <div className="nav-links">
+                <button className="hamburger" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+                    <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+                    <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+                    <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+                </button>
+
+                <div className={`nav-links ${isOpen ? 'active' : ''}`}>
 
                     {isHome ? (
                         <>
