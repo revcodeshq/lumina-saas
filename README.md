@@ -3,6 +3,9 @@
 Lumina is a premium, responsive SaaS landing page built with **React** and **Vite**. It features a modern design aesthetic with glassmorphism effects, a dark mode toggle, and an interactive pricing calculator.
 
 
+
+![Lumina Screenshot](./screenshot.png)
+
 ## 🚀 Features
 
 - **Modern UI/UX**: Clean layout with gradients, glassmorphism, and smooth transitions.
@@ -23,7 +26,7 @@ Lumina is a premium, responsive SaaS landing page built with **React** and **Vit
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/lumina-saas.git
+   git clone https://github.com/revcodeshq/lumina-saas.git
    ```
 
 2. Navigate to the project directory:
