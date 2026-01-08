@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <section className="section hero-section">
+    <section className="section hero-section" id="hero">
       <div className="container hero-container">
         <div className="hero-content">
           <div className="badge">New Lumina v2.0</div>

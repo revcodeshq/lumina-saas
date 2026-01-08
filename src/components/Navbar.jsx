@@ -38,10 +38,10 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="container navbar-container">
-                <Link to="/" className="logo">
+                <a href="#hero" className="logo" onClick={(e) => handleScroll(e, 'hero')}>
                     <div className="logo-icon"></div>
                     Lumina
-                </Link>
+                </a>
 
                 <div className="nav-links">
 
