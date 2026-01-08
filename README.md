@@ -60,4 +60,4 @@ This will generate a `dist` folder ready to be deployed.
 
 ## 📄 License
 
-MIT © 2024
+MIT © 2026

@@ -13,7 +13,7 @@ const Home = () => {
             <FAQ />
             <footer className="footer">
                 <div className="container">
-                    <p>© 2024 Lumina. All rights reserved.</p>
+                    <p>© 2026 Lumina. All rights reserved.</p>
                 </div>
             </footer>
         </>
