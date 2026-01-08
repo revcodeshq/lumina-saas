@@ -6,7 +6,7 @@ Lumina is a premium, responsive SaaS landing page built with **React** and **Vit
 
 [**View Live Demo**](https://revcodeshq.github.io/lumina-saas/)
 
-![Lumina Screenshot](./screenshot.png)
+![Lumina Screenshot](./public/screenshot.png)
 
 ## 🚀 Features
 
