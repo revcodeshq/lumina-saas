@@ -8,7 +8,8 @@
 }
 
 .accordion-item {
-    border-bottom: 1px solid var(--border);
+    /* Border handled by glassmorphism */
+    border-bottom: none;
 }
 
 .accordion-item:last-child {
