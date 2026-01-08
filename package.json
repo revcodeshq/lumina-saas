@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "author": "Rev",
+  "homepage": "https://revcodeshq.github.io/lumina-saas/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
